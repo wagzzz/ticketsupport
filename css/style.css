@@ -1,0 +1,414 @@
+body {
+  background-color: #eee;
+}
+
+iframe {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  overflow:auto;
+}
+
+pre {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #c9c9c9 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #31b1f6 !important; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f8fd4 !important; 
+}
+
+/* Page Title */
+
+.page-title {
+  text-align: center;
+  margin: 0;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 2rem;
+  background-image: url('images/header_bg_blue.png');
+  background-repeat: no-repeat;
+  background-color: #23a3e8;
+}
+
+/* Notifations menu CSS */
+
+.btn-notif {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #eee;
+  border-color: #eee;
+}
+
+.btn-notif::after {
+  display:none
+}
+
+.btn-notif:hover {
+  color: #17a2b8;
+  background-color: #eee;
+  border-color: #eee;
+}
+
+.btn-notif:focus, .btn-notif.focus {
+  box-shadow: 0 0 0 0rem rgba(220, 53, 69, 0.5);
+}
+
+.btn-notif.disabled, .btn-notif:disabled {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #eee;
+  border-color: #eee;
+}
+
+.btn-notif:not(:disabled):not(.disabled):active, .btn-notif:not(:disabled):not(.disabled).active,
+.show > .btn-notif.dropdown-toggle {
+  color: #17a2b8;
+  background-color: #eee;
+  border-color: #eee;
+}
+
+.btn-notif:not(:disabled):not(.disabled):active:focus, .btn-notif:not(:disabled):not(.disabled).active:focus,
+.show > .btn-notif.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0rem rgba(220, 53, 69, 0.5);
+}
+
+.notif-dot {
+  font-size: 0.5em;
+  color: #17a2b8 !important;
+  position: relative !important;
+  top: -1.45em !important;
+  left: -0.85em !important;
+}
+
+.form-notif {
+  width: 418px;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-notif {
+    width: 384px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-notif {
+    width: 300px;
+  }
+  #menu-notif {
+    position: absolute;
+    left: -150%;
+  }
+}
+
+.text-notif {
+  font-size: 0.90em;
+}
+
+/* Utility CSS */
+
+.nopadding {
+  padding: 0em !important;
+  padding-left: 0em !important;
+  padding-right: 0em !important;
+  padding-bottom: 0em !important;
+  padding-top: 0em !important;
+}
+
+.nounderline {
+  text-decoration: none !important;
+}
+
+.word-wrap { 
+  white-space: normal !important; 
+  white-space: pre-wrap;      /* CSS3 */   
+  white-space: -moz-pre-wrap; /* Firefox */    
+  white-space: -pre-wrap;     /* Opera <7 */   
+  white-space: -o-pre-wrap;   /* Opera 7 */    
+  word-wrap: break-word;      /* IE */
+}
+
+.set-width {
+  min-width: 220px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+
+/* Progress - Custom Color Scheme */
+
+.bg-progress{
+  background-color: #fd7e14 !important;
+}
+
+a.bg-progress:focus, a.bg-progress:hover, button.bg-progress:focus, button.bg-progress:hover {
+  background-color: #fd7e14 !important;
+}
+
+/* Alert Progress */
+
+.alert-progress {
+  color: #8d470c;
+  background-color: #fbe1ca;
+  border-color: #fcd3b4;
+}
+
+.alert-progress hr {
+  border-top-color: #f9c497;
+}
+
+.alert-progress .alert-link {
+  color: #683a14;
+}
+
+/* Badge Progress */
+
+.badge-progress {
+  color: #fff;
+  background-color: #fd7e14;
+}
+
+.badge-progress[href]:hover, .badge-progress[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #fd7e14;
+}
+
+/* Button Progress */
+
+.btn-progress {
+  color: #fff;
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+}
+
+.btn-progress:hover {
+  color: #fff;
+  background-color: #fd6b11;
+  border-color: #fd6510;
+}
+
+.btn-progress:focus, .btn-progress.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 149, 0, 0.5);
+}
+
+.btn-progress.disabled, .btn-progress:disabled {
+  color: #fff;
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+}
+
+.btn-progress:not(:disabled):not(.disabled):active, .btn-progress:not(:disabled):not(.disabled).active,
+.show > .btn-progress.dropdown-toggle {
+  color: #fff;
+  background-color: #fd6510;
+  border-color: #fc5e0f;
+}
+
+.btn-progress:not(:disabled):not(.disabled):active:focus, .btn-progress:not(:disabled):not(.disabled).active:focus,
+.show > .btn-progress.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.5);
+}
+
+/* Button Progress */
+
+.btn-dismiss {
+  width: 2.5em;
+  color: #343a40;
+  background-color: #eee;
+  border-color: #eee;
+  border-radius: 0;
+}
+
+.btn-dismiss:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-dismiss:focus, .btn-dismiss.focus {
+}
+
+.btn-dismiss.disabled, .btn-dismiss:disabled {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-dismiss:not(:disabled):not(.disabled):active, .btn-dismiss:not(:disabled):not(.disabled).active,
+.show > .btn-dismiss.dropdown-toggle {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
+
+.btn-dismiss:not(:disabled):not(.disabled):active:focus, .btn-dismiss:not(:disabled):not(.disabled).active:focus,
+.show > .btn-dismiss.dropdown-toggle:focus {
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.form-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Log In Form */
+
+.form-login {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login .form-login-heading,
+.form-login .checkbox {
+  margin-bottom: 10px;
+}
+.form-login .checkbox {
+  font-weight: normal;
+}
+.form-login .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Report Form */
+
+.form-report {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+/* Sort Form */
+
+.form-sort {
+  max-width: 630px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-sort .form-sort-heading,
+.form-sort .checkbox {
+  margin-bottom: 10px;
+}
+.form-sort .checkbox {
+  font-weight: normal;
+}
+.form-sort .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-sort .form-control:focus {
+  z-index: 2;
+}
+.form-sort input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-sort input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Sort Solution */
+
+.form-solution {
+  display: inline;
+}
+
+/* Login validation error message */
+
+.tooltip {
+  color: #dc3545;
+}
+
+.tooltip-inner {
+  max-width: 300px;
+  color: white;
+  background-color: #dc3545;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #dc3545;
+}
+
+.bs-tooltip-auto[y-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+  border-right-color: #dc3545;
+}
+
+.bs-tooltip-auto[y-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
+  border-left-color: #dc3545;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #dc3545;
+}
+
+/* Error Page CSS */
+
+canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.error-page-container {
+  padding: 0;
+  margin: 0;
+}
+
+.error_page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}

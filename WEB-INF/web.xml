@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+  xmlns="http://java.sun.com/xml/ns/javaee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+	<display-name>IT Services Portal</display-name>
+	
+	<!-- Entry point -->
+	<welcome-file-list>
+		<welcome-file>Login</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>itserviceportal.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>itserviceportal.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServicePortalController</servlet-name>
+		<servlet-class>itserviceportal.controller.ServicePortalController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServicePortalController</servlet-name>
+		<url-pattern>/ServicePortal</url-pattern>
+		<url-pattern>/UserPortal</url-pattern>
+		<url-pattern>/StaffPortal</url-pattern>
+	</servlet-mapping> 
+
+	<servlet>
+		<servlet-name>ReportController</servlet-name>
+		<servlet-class>itserviceportal.controller.ReportController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReportController</servlet-name>
+		<url-pattern>/Report</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TicketListController</servlet-name>
+		<servlet-class>itserviceportal.controller.TicketListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketListController</servlet-name>
+		<url-pattern>/TicketList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TicketController</servlet-name>
+		<servlet-class>itserviceportal.controller.TicketController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketController</servlet-name>
+		<url-pattern>/Ticket</url-pattern>
+	</servlet-mapping> 
+
+	<servlet>
+		<servlet-name>KnowledgeBaseController</servlet-name>
+		<servlet-class>itserviceportal.controller.KnowledgeBaseController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>KnowledgeBaseController</servlet-name>
+		<url-pattern>/KnowledgeBase</url-pattern>
+	</servlet-mapping> 
+
+	<servlet>
+		<servlet-name>ArticleController</servlet-name>
+		<servlet-class>itserviceportal.controller.ArticleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArticleController</servlet-name>
+		<url-pattern>/Article</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>NotificationController</servlet-name>
+		<servlet-class>itserviceportal.controller.NotificationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NotificationController</servlet-name>
+		<url-pattern>/Notification</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SuggestionController</servlet-name>
+		<servlet-class>itserviceportal.controller.SuggestionController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SuggestionController</servlet-name>
+		<url-pattern>/Suggestion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TimeoutController</servlet-name>
+		<servlet-class>itserviceportal.controller.TimeoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TimeoutController</servlet-name>
+		<url-pattern>/Timeout</url-pattern>
+	</servlet-mapping> 
+
+	<!-- Filters -->
+	<filter>
+		<filter-name>Authentication</filter-name>
+		<filter-class>itserviceportal.controller.Authentication</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Listeners -->
+	<listener>
+		<listener-class>itserviceportal.controller.SessionListener</listener-class>
+	</listener>
+
+	<!-- Error Pages -->
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/view/error403.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/view/error404.jsp</location>
+	</error-page>
+
+	 <error-page> 
+		<error-code>500</error-code>
+		<location>/WEB-INF/view/error500.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/WEB-INF/view/errorException.jsp</location>
+	</error-page>
+	
+	<!-- Tag Libraries -->
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://localhost:8080/c3180044_c3281849_c3237808_FinalProject/taglib/customtags</taglib-uri>
+			<taglib-location>/WEB-INF/customtags.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

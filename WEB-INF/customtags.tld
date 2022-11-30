@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+
+	<description>Library for formatting output</description>
+	<tlib-version>2.1</tlib-version>
+	<short-name>customtags</short-name>
+	<uri>http://localhost:8080/c3180044_c3281849_c3237808_FinalProject/taglib/customtags</uri>
+	<description>This taglib is for modifying output</description>
+
+	<tag>
+		<name>date</name>
+		<tag-class>itserviceportal.customtags.DateFormatTag</tag-class>
+		<body-content>empty</body-content>
+		<description>This tag is for formatting date/time</description>
+		<attribute>
+			<name>date</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<elexprvalue>true</elexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>notif</name>
+		<tag-class>itserviceportal.customtags.NotificationTag</tag-class>
+		<body-content>empty</body-content>
+		<description>This tag is for formatting a notification</description>
+		<attribute>
+			<name>notification</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<elexprvalue>true</elexprvalue>
+		</attribute>
+	</tag>
+</taglib>
